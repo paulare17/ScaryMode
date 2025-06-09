@@ -38,7 +38,7 @@ export default function ActorDetail() {
       )}
       <h3>Pel·lícules:</h3>
       <List 
-        movies={moviesData.cast}
+        movies={moviesData.cast as (Film | Actor)[]}
         cols={7}
         imageSize="w300"
         linkPrefix="/movie"

@@ -102,7 +102,7 @@ const FilmDetail = () => {
       </section>
       {castData && castData.cast && (
         <List 
-          movies={castData.cast}
+          movies={castData.cast as (Film | Actor)[]}
           cols={7}
           imageSize="w300"
           linkPrefix="/person"

@@ -14,17 +14,16 @@ export interface Film {
   title: string;
   original_title: string;
   overview: string;
-  name: string;
-  profile_path: string;
   release_date: string;
-  character?: string;
 }
 //interface actors
 export interface Actor {
   id: number;
   name: string;
   profile_path: string;
-  known_for: Film[];
+  character?: string;
+  known_for_department?: string;
+  job?: string;
 }
 
 

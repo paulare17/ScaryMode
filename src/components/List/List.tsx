@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { useGetDadesQuery, useGetMoviesByGenreQuery } from '../../features/apiSlice';
-import type { Film } from '../../features/apiSlice';
+import type { Film, Actor } from '../../features/apiSlice';
 
 type ListProps = {
-  movies?: Film[];
-    cols?: number;
+  movies?: (Film | Actor)[];
+  cols?: number;
   imageSize?: string;
   linkPrefix?: string;
   isActor?: boolean;
@@ -26,7 +26,7 @@ export default function List({
 
 }: ListProps) {
   const [page, setPage] = React.useState(1)
-  const [movies, setMovies] = React.useState<Film[]>([])
+  const [movies, setMovies] = React.useState<(Film | Actor)[]>([])
 
 const { data: normalData, isLoading: normalLoading, isError: normalError } = 
   useGetDadesQuery({ page }, { skip: isScaryMode });
