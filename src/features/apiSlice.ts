@@ -2,8 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 // import Film from "../components/List/List"
 
 export const apiKey: string = "38aec9dcc915b82585b7be878fba2d4b";
-// const page: number = 1;
-// const language: string = "&language=ca"
+
 const baseUrl: string = `https://api.themoviedb.org/3/`
 
 
