@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { 
   useGetActorByIdQuery, 
   useGetActorMoviesQuery,
+  type Film,
+  type Actor
 } from "../features/apiSlice";
 import List from "../components/List/List";
 
